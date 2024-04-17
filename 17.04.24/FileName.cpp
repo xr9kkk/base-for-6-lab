@@ -18,6 +18,11 @@ int main() {
 	vector.print();
 	vector.sorting();
 	vector.print();
+	vector.to_binary("students_bin.txt");
+	std::ifstream file_bin("students_bin.txt", std::ios::binary);
+	/*print_binary()*/
+	/*task(file_bin);
+	file_bin.close(); это на будущее*/
 	system("pause");
 	return 0;
 }
