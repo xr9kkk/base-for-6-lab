@@ -21,13 +21,21 @@ void STUDENT::print() {
     std::cout << "-------------\n";
 }
 
-int STUDENT::compare(const STUDENT& student) {
+int STUDENT::compare( STUDENT& student) {
     int result = -1;
     if (group > student.group || (group == student.group && strcmp(FIO, student.FIO) > 0))
         result = 1;
     else if (group == student.group && strcmp(FIO, student.FIO) == 0)
         result = 0;
     return result;
+}
+
+double STUDENT::getter_average()  {
+    double sum = 0;
+    for (int i = 0; i < 5; ++i) {
+        sum += marks[i];
+    }
+    return sum / 5.0; 
 }
 
 int STUDENT::kind() {

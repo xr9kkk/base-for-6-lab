@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
-#include <string>
 
 using MARKS = int[5];
 const int m = 35;
@@ -12,14 +11,16 @@ private:
     char FIO[m];
     int group;
     MARKS marks;
+
 public:
     STUDENT() {}
     STUDENT(std::ifstream& file);
     void print();
-    int compare(const STUDENT& student);
-    int getter_group() const { return group; }
-    const char* getter_FIO() const { return FIO; }
-    const int* getter_marks() const { return marks; }
+    int compare( STUDENT& student);
+    int getter_group()  { return group; }
+    const char* getter_FIO()  { return FIO; }
+    const int* getter_marks()  { return marks; }
+    double getter_average() ; 
     int kind();
     friend std::ostream& operator<<(std::ostream& out, const STUDENT& student);
 };

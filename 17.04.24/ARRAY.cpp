@@ -33,7 +33,7 @@ bool ARRAY::to_binary(const char* file_name) {
     if (!file_bin.is_open())
         result = false;
     else {
-        file_bin.write((char*)&size, sizeof(size));
+        
         for (size_t i = 0; i < size; ++i)
             file_bin.write((char*)arr[i], sizeof(STUDENT));
         file_bin.close();
