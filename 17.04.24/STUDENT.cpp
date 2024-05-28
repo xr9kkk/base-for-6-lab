@@ -21,14 +21,15 @@ void STUDENT::print() {
     std::cout << "-------------\n";
 }
 
-int STUDENT::compare( STUDENT& student) {
+int STUDENT::compare(STUDENT& student) {
     int result = -1;
-    if (group > student.group || (group == student.group && strcmp(FIO, student.FIO) > 0))
+    if (group > student.group)
         result = 1;
-    else if (group == student.group && strcmp(FIO, student.FIO) == 0)
+    else if (group == student.group)
         result = 0;
     return result;
 }
+
 
 double STUDENT::getter_average()  {
     double sum = 0;
